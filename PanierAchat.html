@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Liste d'achats</title>
+
+<script src="functions.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+<link rel="stylesheet" href="table.css" media="screen" title="no title" charset="utf-8">
+
+    <table cellpadding="4" cellspacing="4" border="1">
+    <tr>
+        <td valign="top">
+            <table cellpadding="10" cellspacing="20" border="1">
+                <thead>
+                    <tr>
+                        <td colspan="2">
+                            Produits en vente
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                          ProduitX
+                        </td>
+                        <td>
+                            <input type="button" value="Ajouter au Panier" onclick="AjouterPanier('ProduitX','ProduitX Neuf',122)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ProduitY
+                        </td>
+                        <td>
+                            <input type="button" value="Ajouter au Panier" onclick="AjouterPanier('ProduitY','ProduitY Utilisé',90)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ProduitZ
+                        </td>
+                        <td>
+                            <input type="button" value="Ajouter au Panier" onclick="AjouterPanier('ProduitZ','ProduitZ Usé',15)"/>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </td>
+        <td valign="top">
+            <table cellpadding="4" cellspacing="20" border="1" id="commandeProduitsTbl">
+                <thead>
+                    <tr>
+                        <td>
+                            Nom
+                        </td>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            Prix
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="commandeProduitsTblBody">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" align="right" id="panier_total">
+
+                          <td>
+                              <input type="button" value="Supprimer le dernier produit" onclick="RetirerPanier('ProduitX','ProduitX Neuf',122)"/>
+                          </td>
+
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+  </body>
+</html>
